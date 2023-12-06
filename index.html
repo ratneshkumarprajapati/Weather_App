@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <h1>Wheather App</h1>
+            <div class="tab-weather">
+                <p class="tab" data-userWeather>Your Wheather</p>
+                <p class="tab" data-searchWeather>Search Wheather</p>
+            </div>
+            <div class="weather-container">
+                <!-- grant-location -access -->
+
+                <div class="sub-container grant-location-container">
+                    <div class="img">
+                        <img src="./assect1/location.svg" alt="Location" width="70px" loading="lazy">
+                    </div>
+                    <div class="heading">
+                        <h2>Grant Location Access</h2>
+                        <p>Allow Access To Get Weather Informtion</p>
+                    </div>
+                    <button data-grantAccess class="btn">Grant Access</button>
+                </div>
+
+                <!-- search- form -->
+
+
+                <form action="" class="sub-form form-container" data-searchForm>
+                    <input type="text" placeholder="Search for City..." data-searchInput>
+                    <button class="btn" type="submit">
+                     <img src="./assets/search.png" alt="" width="20">
+                    </button>
+
+                </form>
+
+                <!-- loading screen container -->
+                <div class="sub-container loading-container">
+                    <img src="./assets/loading.gif" alt="" width="150" height="150">
+                    <p>loading..</p>
+                </div>
+                <!-- error page -->
+                <div class="error" data-error>
+                    <img src="./assets/not-found.png" alt="">
+                    <p>City Not Found</p>
+                </div>
+                <!-- show weather information -->
+
+                <div class=" sub-container user-info-container">
+                    <!-- city name and flag -->
+                    <div class="name">
+                        <p data-cityName></p>
+                        <img data-countaryIcon width="30">
+                    </div>
+                    <!-- wheather dscription -->
+                    <p data-weatherDes class="des"></p>
+                    <img data-weatherIcon class="wIcon">
+                    <div class="temp-container">
+                        <p data-temp class="temp"></p>
+                        <p class="temp">°C</p>
+                    </div>
+
+
+                    <!-- 3 weather div -->
+                    <div class="parameter-container">
+                        <div class="sub-container parameter">
+                            <img src="./assets/wind.png" alt="">
+                            <p>Windspeed</p>
+                            <p data-windSpeed></p>
+
+                        </div>
+                        <div class="sub-container parameter">
+                            <img src="./assets/humidity.png" alt="">
+                            <p>Humidity</p>
+                            <p data-humidity></p>
+                        </div>
+                        <div class="sub-container parameter">
+                            <img src="./assets/cloud.png   " alt="">
+                            <p>Clouds</p>
+                            <p data-cloudness></p>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
